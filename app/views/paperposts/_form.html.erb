@@ -1,4 +1,3 @@
-
 <%= form_for @paperpost, :html => { :class => "form-horizontal paperpost" } do |f| %>
 
  <head>
@@ -37,7 +36,8 @@ $(document).ready(function(){
   <% if @paperpost.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@paperpost.errors.count, "error") %> prohibited this paperpost from being saved:</h3>
+        <h3 >Submit Articles<%= pluralize(@paperpost.errors.count, "error") %> prohibited this paperpost from being saved:</h3>
+      
       </div>
       <div class="panel-body">
         <ul>
@@ -51,7 +51,7 @@ $(document).ready(function(){
 
   <div class="form-group">
     <%= f.label :username, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
       <%= f.text_field :username, :class => 'form-control' %>
     </div>
     <%=f.error_span(:username) %>
@@ -68,7 +68,7 @@ $(document).ready(function(){
   <!-- Trying dynamically -->
   <div class="form-group">
   <%= f.label :articlecategory, :class => 'control-label col-lg-2' %>
-      <div class="col-lg-10">
+      <div class="col-xs-5">
   <%= f.select :articlecategory, [[ "Books","Books"], ["Articles", "Articles"], ["Magazines", "Magazines"]], { label: "Choose your Journal Category:" }, { class: "selectpicker" } %>
         </div>
   </div>
@@ -89,46 +89,48 @@ $(document).ready(function(){
   </div> -->
   <div class="form-group">
     <%= f.label :author, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
       <%= f.text_field :author, :class => 'form-control' %>
     </div>
     <%=f.error_span(:author) %>
   </div>
   <div class="form-group">
     <%= f.label :title, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
       <%= f.text_field :title, :class => 'form-control' %>
     </div>
     <%=f.error_span(:title) %>
   </div>
   
-  <div style='display:none;' id='business'>
+ <div style='display:none;' id='business'>
+     <div class="form-group has-success has-feedback">
      <div class="form-group">
     <%= f.label :journalname, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
-      <%= f.text_field :journalname, :class => 'form-control' %>
+    <div class="col-xs-5">
+      <%= f.text_field :journalname , :id => 'inputSuccess', :class => 'form-control' %>
     </div>
     <%=f.error_span(:journalname) %>
+    </div>
   </div>
   </div>
   
   <div class="form-group">
     <%= f.label :description, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
       <%= f.text_field :description, :class => 'form-control' %>
     </div>
     <%=f.error_span(:description) %>
   </div>
   <div class="form-group">
     <%= f.label :publishername, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
       <%= f.text_field :publishername, :class => 'form-control' %>
     </div>
     <%=f.error_span(:publishername) %>
   </div>
   <div class="form-group">
     <%= f.label :pages, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
       <%= f.text_field :pages, :class => 'form-control' %>
     </div>
     <%=f.error_span(:pages) %>
@@ -143,21 +145,21 @@ $(document).ready(function(){
   
   <div class="form-group">
     <%= f.label :publish_date, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
       <%= f.text_field :publish_date, "data-provide" => 'datepicker' %>
     </div>
     <%=f.error_span(:publish_date) %>
   </div>
   <div class="form-group">
     <%= f.label :submitted_date ,:class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
       <%= f.text_field :submitted_date, "data-provide" => 'datepicker' %>
     </div>
     <%=f.error_span(:submitted_date) %>
   </div>
   <div class="form-group">
     <%= f.label :status_type, :class=> 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-xs-5">
     <div class='control'>
       <%= f.select(:status_type, options_for_select([['PENDING','PENDING']]) , {include_blank: true}) %>
     </div>
@@ -167,7 +169,7 @@ $(document).ready(function(){
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= f.submit nil, :class => 'btn btn-success' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 paperposts_path, :class => 'btn btn-default' %>
     </div>

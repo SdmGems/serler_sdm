@@ -1,7 +1,7 @@
 class DeviseCreateVisitors < ActiveRecord::Migration[5.0]
   def change
     create_table :visitors do |t|
-      
+       t.boolean  :admin
       #Username
        t.string :name
       ## Database 
@@ -11,7 +11,7 @@ class DeviseCreateVisitors < ActiveRecord::Migration[5.0]
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
-
+     
       ## Rememberable
       t.datetime :remember_created_at
 

@@ -1,9 +1,14 @@
 class PaperpostsController < ApplicationController
   before_action :authenticate_visitor!
   before_action :set_paperpost, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /paperposts
   # GET /paperposts.json
+  def is_admin?
+   self.admin #returns a boolean
+ end
+ 
   def index
     @paperposts = Paperpost.all
   end
@@ -16,6 +21,7 @@ class PaperpostsController < ApplicationController
   # GET /paperposts/new
   def new
     @paperpost = Paperpost.new
+  
   end
 
   # GET /paperposts/1/edit
@@ -70,6 +76,6 @@ class PaperpostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def paperpost_params
-      params.require(:paperpost).permit(:username, :articlecategory, :author, :title, :journalname, :description, :publishername, :pages, :volume, :status_type , :publish_date, :submitted_date)
+      params.require(:paperpost).permit(:username, :admin , :articlecategory, :author, :title, :journalname, :description, :publishername, :pages, :volume, :status_type , :publish_date, :submitted_date,  authors_attributes: [:id, :name, :author, :done, :_destroy])
     end
 end
