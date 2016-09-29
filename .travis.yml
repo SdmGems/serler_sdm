@@ -4,6 +4,7 @@ rvm:
 before_script:
 - bundle install --path vendor/bundle
 - bundle exec rake db:create
+- bundle exec rake db:migrate:redo VERSION=20160921052041
 - bundle exec rake db:migrate
 
 script:
