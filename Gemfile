@@ -55,7 +55,8 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sprockets-rails', ' ~> 3.2.0'
   gem 'rspec-rails'
-  gem 'cucumber'
+  gem 'cucumber-rails' , :require => false
+  gem 'database_cleaner'
 end
 
 group :development do
