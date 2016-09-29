@@ -7,12 +7,16 @@ gem 'bcrypt',         '3.1.11'
 gem 'devise'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
+gem 'rails_admin', '~> 1.0'
 gem 'bootstrap_form'
 gem "bootstrap-table-rails"
-
+ #second added
+#gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+#gem 'activeadmin', github: 'activeadmin'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
+gem 'therubyracer'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -29,6 +33,9 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem "cocoon"
+gem 'nested_form_fields'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -46,6 +53,7 @@ gem 'bootstrap-datepicker-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'sprockets-rails', ' ~> 3.2.0'
 end
 
 group :development do
