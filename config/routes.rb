@@ -3,14 +3,14 @@ Rails.application.routes.draw do
 
 
   resources :analysts
-  root 'analysts#index'
+  #get 'sign_in', to 'analysts#index'
   
   
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :paperposts
   get 'paperpost/show'
    get 'paperpost/draft'
- devise_scope :visitor do 
+  devise_scope :visitor do 
     root to: 'pages#home'
     match '/sessions/visitor', to: 'devise/sessions#create', via: :post
   end
@@ -41,11 +41,11 @@ Rails.application.routes.draw do
 
   get 'page/home'
   get 'page/index'
-  root 'page#index'
+  #root 'page#index'
 
 
 
- root   'static_pages#home'
+  root   'static_pages#home'
   get    '/help',    to: 'static_pages#help'
   get    '/about',   to: 'static_pages#about'
   get    '/contact', to: 'static_pages#contact'
