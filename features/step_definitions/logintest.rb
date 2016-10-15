@@ -1,3 +1,13 @@
+#module KnowsSession
+#   def getUserSession
+#     session = Capybara::Session.new(:rack_test, "a")
+#     session.visit("/")
+ #    session.current_host
+  # end
+#end
+
+#World(KnowsSession)
+
 When(/^I go to the homepage$/) do
   visit root_path
 end
@@ -36,4 +46,23 @@ end
 
 Given(/^I am in the page of signup$/) do
  visit "/visitors/sign_in"
+end
+
+@test
+Given(/^I am a visitor$/) do
+    current_driver = Capybara.current_driver
+  begin
+    Capybara.current_driver = :rack_test
+    page.driver.submit :delete, "/sessions/destroy", {}
+  ensure
+    Capybara.current_driver = current_driver
+  end
+end
+
+Given(/^I click on submit$/) do
+  click_link('Submit')
+end
+
+Given(/^I should be redirected to login page$/) do
+  visit "/visitors/sign_in"
 end

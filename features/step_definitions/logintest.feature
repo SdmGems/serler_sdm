@@ -13,7 +13,6 @@ Scenario: User sees email and password and login button
    And I should see password
    And I should see log in button
 
-@test
 Scenario: User logs in
   Given I am in the page of signup
   When I fill in email
@@ -21,7 +20,8 @@ Scenario: User logs in
   And I click on log in
   Then I should see submitted articles
   
-#Scenario: Visitor is redirected to login page when they submit
-#Given I am a visitor
-#When I click on submit
-#Then I should be redirected to login page
+  @test
+Scenario: Visitor is redirected to login page when they submit
+Given I am a visitor
+When I click on submit
+Then I should be redirected to login page
