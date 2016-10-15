@@ -5,3 +5,35 @@ end
 Then(/^I should see the signup$/) do
   expect(page).to have_content("Sign Up")
 end
+
+Then(/^I should see Email$/) do
+  expect(page).to have_content("Email")
+end
+
+And(/^I should see password$/) do
+  expect(page).to have_content("Password")
+end
+
+And(/^I should see log in button$/) do
+  expect(page).to have_content("Log in")
+end
+
+When(/^I fill in email$/) do
+  fill_in('visitor_email', :with =>"abc@abc.com")
+end
+
+And(/^I fill in password$/) do
+  fill_in('visitor_password', :with =>"000000")
+end
+
+And(/^I click on log in$/) do
+  click_button('Log in')
+end
+
+Then(/^I should see submitted articles$/) do
+  expect(page).to have_content("View Submitted Articles")
+end
+
+Given(/^I am in the page of signup$/) do
+ visit "/visitors/sign_in"
+end
