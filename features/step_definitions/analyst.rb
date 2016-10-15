@@ -1,5 +1,5 @@
 When(/^I go to the analyst page$/) do
-  visit analysts_path
+  visit "/analysts/new"
 end
 
 Then(/^I should see the New$/) do

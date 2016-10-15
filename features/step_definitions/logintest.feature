@@ -20,7 +20,7 @@ Scenario: User logs in
   And I click on log in
   Then I should see submitted articles
   
-  @test
+
 Scenario: Visitor is redirected to login page when they submit
 Given I am a visitor
 When I click on submit

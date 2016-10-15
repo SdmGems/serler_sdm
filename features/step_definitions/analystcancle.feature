@@ -5,4 +5,4 @@ So that i can come again and enter the data
 
 Scenario: analyst should see Cancle button 
 When I go to the analystnew page
-Then I should see the Cancle
+Then I should see the Cancel

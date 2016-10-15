@@ -1,7 +1,7 @@
 When(/^I go to the analystnew page$/) do
-  visit analystnew_path
+  visit "/analysts/new"
 end
 
 Then(/^I should see the Cancel$/) do
-  expect(page).to have_content("Cancle")
+  expect(page).to have_content("Cancel")
 end
