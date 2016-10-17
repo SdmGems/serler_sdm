@@ -7,11 +7,6 @@ RSpec.describe "analysts/index", type: :view do
         :research => "Research",
         :method => "Method",
         :used => "Used"
-      ),
-      Analyst.create!(
-        :research => "Research",
-        :method => "Method",
-        :used => "Used"
       )
     ])
   end

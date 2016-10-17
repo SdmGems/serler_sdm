@@ -18,6 +18,7 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
+
 RSpec.describe AnalystsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
@@ -52,12 +53,12 @@ RSpec.describe AnalystsController, type: :controller do
     end
   end
 
-  describe "GET #new" do
-    it "assigns a new analyst as @analyst" do
-      get :new, params: {}, session: valid_session
-      expect(assigns(:analyst)).to be_a_new(Analyst)
-    end
-  end
+#  describe "GET #new" do
+#    it "assigns a new analyst as @analyst" do
+#      get :new, params: {}, session: valid_session
+#      expect(assigns(:analyst)).to be_a_new(Analyst)
+#    end
+#  end
 
   describe "GET #edit" do
     it "assigns the requested analyst as @analyst" do

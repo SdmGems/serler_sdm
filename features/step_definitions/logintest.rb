@@ -40,9 +40,9 @@ And(/^I click on log in$/) do
   click_button('Log in')
 end
 
-#Then(/^I should see submitted articles$/) do
-#  expect(page).to have_content("View Submitted Articles")
-#end
+Then(/^I should see submitted articles$/) do
+  expect(page).to have_content("View Submitted Articles")
+end
 
 Given(/^I am in the page of signup$/) do
  visit "/visitors/sign_in"
