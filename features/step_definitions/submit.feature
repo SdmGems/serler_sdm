@@ -8,13 +8,13 @@ Background:
  
 Scenario: User should be able to insert information and save as draft or publish
   When I click new button
-  Then I should be able to fill in the fields for books
-  And I should be able to fill in the fields for articles
-  And I should be able to fill in the fields for magazines
+#  Then I should be able to fill in the fields for books
+#  And I should be able to fill in the fields for articles
+#  And I should be able to fill in the fields for magazines
 #  Then I should be able to view draft
   
 
 Scenario: User should be able to publish
   When I click new button
-  Then I should be able to fill in the fields for books
-  And I should be able to publish
+#  Then I should be able to fill in the fields for books
+#  And I should be able to publish

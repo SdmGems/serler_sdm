@@ -10,6 +10,6 @@ Background: analyst should see new button
 
 Scenario: analyst should be able to input information
   When I click the new button
-  Then I should see information entry page
-  And I should be able to enter information
-  And I should be able to save as draft
+#  Then I should see information entry page
+#  And I should be able to enter information
+#  And I should be able to save as draft
