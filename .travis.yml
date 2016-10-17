@@ -5,7 +5,7 @@ before_script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
 
-script:
+#script:
 #- bundle exec cucumber
 #- bundle exec rspec
 
