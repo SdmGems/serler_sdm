@@ -16,7 +16,7 @@ deploy:
   app:
     newlipi: nameless-castle-22462
     sprint2: nameless-castle-22462
-    master: sheltered-brook-26948
+    master: nameless-castle-22462
 
 
  # on:
